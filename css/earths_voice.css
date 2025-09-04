@@ -1,14 +1,22 @@
 @charset "utf-8";
-.earths_voice_inner h1 {
-  margin: auto;
+.earths_voice {
+  background-color: #000;
+}
+h1 {
+  text-align: center;
+  font-size: var(--text--heading--h1);
+  font-weight: 600;
+  color: #fff;
+  padding: var(--spacing--large) 0;
 }
 .earths_voice_swiper {
   display: flex;
   gap: 10px;
   margin: auto;
+  padding-bottom: var(--spacing--large);
   width: 100%;
   max-width: 1320px;
-  height: 450px;
+  height: 600px;
 }
 .earths_voice_swiper_box {
   position: relative;
@@ -17,6 +25,26 @@
   flex: 1;
   transition: 0.5s;
   cursor: pointer;
+}
+.earths_voice_swiper_box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+.earths_voice_swiper_box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .earths_voice_swiper_cont {
   position: absolute;
@@ -35,10 +63,9 @@
   border-radius: 50%;
   display: grid;
   place-items: center;
+  font-size: 18px;
+  z-index: 2;
 }
-/* .earths_voice_swiper_cont span {
-  line-height: 1.4;
-} */
 .earths_voice_swiper_box:not(.active) .earths_voice_swiper_text {
   opacity: 0;
   transition: 0.3s;
@@ -61,13 +88,22 @@
 .earths_voice_swiper_box.active {
   flex: 10;
 }
-.earths_voice_swiper_box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.earths_voice_swiper_text h3 {
+  position: relative;
+  font-size: var(--text--body--regular);
+  font-weight: 600;
+  color: #fff;
+  z-index: 2;
 }
+.earths_voice_swiper_text span {
+  position: relative;
+  font-size: var(--text--body--small);
+  color: #fff;
+  z-index: 2;
+}
+
 /* 반응형 */
-@media (max-width: 1280px) {
+/* @media (max-width: 1280px) {
   .earths_voice_swiper {
     max-width: 1280px;
   }
@@ -81,4 +117,4 @@
   .earths_voice_swiper {
     max-width: 390px;
   }
-}
+} */

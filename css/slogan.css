@@ -1,1 +1,44 @@
 @charset "utf-8";
+/* 폰트 (나중에 메인에 추가) */
+@font-face {
+  font-family: "KkuBulLim";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/BMkkubulimTTF-Regular.woff2")
+    format("woff2");
+  font-display: swap;
+}
+.slogan_wrap {
+  padding: var(--spacing--large) 0;
+  width: 100%;
+}
+.slogan_EN {
+  padding-top: 220px;
+  text-align: center;
+}
+.slogan_EN span {
+  font-family: "KkuBulLim";
+  font-size: 100px;
+  color: #fff;
+}
+.slogan_EN .top span {
+  padding: 10px 30px;
+  border-radius: 40px 0 40px 0;
+  background-color: var(--color--main);
+}
+.slogan_EN .bottom {
+  margin-top: 50px;
+}
+.slogan_EN .bottom span {
+  padding: 10px 30px;
+  border-radius: 40px 0 40px 0;
+  background-color: var(--color--sub);
+}
+.slogan_KR {
+  padding-bottom: 170px;
+  margin-top: 30px;
+}
+.slogan_KR p {
+  font-family: "Pretendard";
+  font-size: var(--text--heading--h1);
+  font-weight: 600;
+  text-align: center;
+}

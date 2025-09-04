@@ -2,13 +2,16 @@
 .earths_voice {
   background-color: #000;
 }
-h1 {
+/* 타이틀 */
+.earths_voice_inner h1 {
   text-align: center;
+  font-family: "Paperozi";
   font-size: var(--text--heading--h1);
   font-weight: 600;
   color: #fff;
   padding: var(--spacing--large) 0;
 }
+/* 스와이퍼 */
 .earths_voice_swiper {
   display: flex;
   gap: 10px;
@@ -26,6 +29,7 @@ h1 {
   transition: 0.5s;
   cursor: pointer;
 }
+/* 이미지 그라데이션 */
 .earths_voice_swiper_box::after {
   content: "";
   position: absolute;
@@ -55,6 +59,7 @@ h1 {
   color: white;
   gap: 15px;
 }
+/* 아이콘 */
 .earths_voice_swiper_cont i {
   width: 40px;
   height: 40px;
@@ -88,8 +93,10 @@ h1 {
 .earths_voice_swiper_box.active {
   flex: 10;
 }
+/* text */
 .earths_voice_swiper_text h3 {
   position: relative;
+  font-family: "Pretendard";
   font-size: var(--text--body--regular);
   font-weight: 600;
   color: #fff;
@@ -97,6 +104,7 @@ h1 {
 }
 .earths_voice_swiper_text span {
   position: relative;
+  font-family: "Pretendard";
   font-size: var(--text--body--small);
   color: #fff;
   z-index: 2;

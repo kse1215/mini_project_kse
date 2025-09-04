@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+@import url(reset.css);
+@import url(header.css);
+@import url(main_visual.css);
+@import url(scroll_visual.css);
+@import url(earths_voice.css);
+@import url(slogan.css);
+@import url(earths_protector.css);
+@import url(earths_news.css);
+@import url(protector_subs.css);
+@import url(footer.css);
+
+/* 폰트 */
+@font-face {
+  font-family: "Paperozi";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2")
+    format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
+    format("woff");
+  font-display: swap;
+}
+
+/* style */
+:root {
+  /* Color styles */
+  --color--main: #2d71ed;
+  --color--sub: #f1cb00;
+  --color--neutral: #3caff2;
+  --color--state: #f33c01;
+  --color--font--black: #1c1c1c;
+  --color--font--sub: #555555;
+
+  /* Text-size styles */
+  --text--heading--h1: 40px;
+  --text--heading--h2: 32px;
+  --text--header: 23px;
+  --text--body--regular: 20px;
+  --text--body--small: 16px;
+  --text--footer--regular: 18px;
+  --text--footer--small: 15px;
+
+  /* 간격 */
+  --spacing--large: 100px;
+  --spacing--medium: 60px;
+  --spacing--small: 25px;
+}
+
+.inner {
+  width: 1320px;
+  margin: auto;
+}

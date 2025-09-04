@@ -1,0 +1,84 @@
+@charset "utf-8";
+.earths_voice_inner h1 {
+  margin: auto;
+}
+.earths_voice_swiper {
+  display: flex;
+  gap: 10px;
+  margin: auto;
+  width: 100%;
+  max-width: 1320px;
+  height: 450px;
+}
+.earths_voice_swiper_box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  flex: 1;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.earths_voice_swiper_cont {
+  position: absolute;
+  bottom: 17px;
+  left: 13px;
+  display: flex;
+  align-items: end;
+  color: white;
+  gap: 15px;
+}
+.earths_voice_swiper_cont i {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+/* .earths_voice_swiper_cont span {
+  line-height: 1.4;
+} */
+.earths_voice_swiper_box:not(.active) .earths_voice_swiper_text {
+  opacity: 0;
+  transition: 0.3s;
+}
+.earths_voice_swiper_box:first-child .earths_voice_swiper_cont i {
+  color: #2ecc71;
+}
+.earths_voice_swiper_box:nth-child(2) .earths_voice_swiper_cont i {
+  color: #5d9cec;
+}
+.earths_voice_swiper_box:nth-child(3) .earths_voice_swiper_cont i {
+  color: #7fe1f0;
+}
+.earths_voice_swiper_box:nth-child(4) .earths_voice_swiper_cont i {
+  color: #99cf8f;
+}
+.earths_voice_swiper_box:nth-child(5) .earths_voice_swiper_cont i {
+  color: #ed5565;
+}
+.earths_voice_swiper_box.active {
+  flex: 10;
+}
+.earths_voice_swiper_box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 반응형 */
+@media (max-width: 1280px) {
+  .earths_voice_swiper {
+    max-width: 1280px;
+  }
+}
+@media (max-width: 768px) {
+  .earths_voice_swiper {
+    max-width: 768px;
+  }
+}
+@media (max-width: 390px) {
+  .earths_voice_swiper {
+    max-width: 390px;
+  }
+}

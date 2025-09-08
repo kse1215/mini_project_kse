@@ -119,8 +119,12 @@
   margin-top: 30px;
 }
 .slogan_KR p {
+  width: 65%;
+  /* display: inline; */
+  text-align: center;
+  margin: auto;
   font-family: "Pretendard";
   font-size: var(--text--heading--h1);
   font-weight: 600;
-  text-align: center;
+  background-color: #fff;
 }

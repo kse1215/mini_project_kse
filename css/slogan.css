@@ -6,6 +6,9 @@
     format("woff2");
   font-display: swap;
 }
+.slogan {
+  background: url("../image/slogan_bee.gif") no-repeat center;
+}
 .slogan_wrap {
   padding: var(--spacing--large) 0;
   width: 100%;

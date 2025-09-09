@@ -1,1 +1,135 @@
 @charset "utf-8";
+.scroll_visual {
+  position: relative;
+}
+.parallax__fade {
+  --color-dark-rgb: 0, 0, 0;
+  background: linear-gradient(
+    to top,
+    rgba(var(--color-dark-rgb), 1) 0%,
+    rgba(var(--color-dark-rgb), 0.738) 19%,
+    rgba(var(--color-dark-rgb), 0.541) 34%,
+    rgba(var(--color-dark-rgb), 0.382) 47%,
+    rgba(var(--color-dark-rgb), 0.278) 56.5%,
+    rgba(var(--color-dark-rgb), 0.194) 65%,
+    rgba(var(--color-dark-rgb), 0.126) 73%,
+    rgba(var(--color-dark-rgb), 0.075) 80.2%,
+    rgba(var(--color-dark-rgb), 0.042) 86.1%,
+    rgba(var(--color-dark-rgb), 0.021) 91%,
+    rgba(var(--color-dark-rgb), 0.008) 95.2%,
+    rgba(var(--color-dark-rgb), 0.002) 98.2%,
+    transparent 100%
+  );
+}
+
+.parallax__header {
+  z-index: 2;
+  padding: var(--section-padding) var(--container-padding);
+  justify-content: center;
+  align-items: center;
+  min-height: 1080px;
+  display: flex;
+  position: relative;
+}
+
+.parallax {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax__content {
+  padding: var(--section-padding) var(--container-padding);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.parallax__visuals {
+  object-fit: cover;
+  width: 100%;
+  max-width: none;
+  height: 1080px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.parallax__layers {
+  object-fit: cover;
+  width: 100%;
+  max-width: none;
+  height: 1080px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.parallax__fade {
+  z-index: 30;
+  object-fit: cover;
+  width: 100%;
+  max-width: none;
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax__layer-img {
+  pointer-events: none;
+  object-fit: cover;
+  width: 100%;
+  max-width: none;
+  height: 117.5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.trash {
+  top: 70%;
+}
+
+.testBG {
+  background-color: #000000;
+  height: 300px;
+  width: 100%;
+}
+
+/* 반응형 */
+@media all and (max-width: 1200px) {
+  .parallax__header {
+    min-height: 800px;
+  }
+  .parallax__visuals {
+    height: 800px;
+  }
+  .parallax__layers {
+    height: 800px;
+  }
+}
+@media all and (max-width: 768px) {
+  .parallax__header {
+    min-height: 500px;
+  }
+  .parallax__visuals {
+    height: 500px;
+  }
+  .parallax__layers {
+    height: 500px;
+  }
+}
+@media all and (max-width: 390px) {
+  .parallax__header {
+    min-height: 300px;
+  }
+  .parallax__visuals {
+    height: 300px;
+  }
+  .parallax__layers {
+    height: 300px;
+  }
+}

@@ -4,13 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>세계자연기금 홈페이지, WWF Korea</title>
-    <!-- jQuery -->
-    <script src="js/jquery-1.12.3.js"></script>
-    <script src="js/jquery.js"></script>
-    <!-- js -->
-    <script src="js/main.js"></script>
-    <!-- css -->
-    <link rel="stylesheet" href="css/main.css" />
     <!-- 파비콘 -->
     <link
       rel="icon"
@@ -25,7 +18,15 @@
       sizes="180x180"
       href="assets/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <!-- <link rel="manifest" href="assets/favicon/site.webmanifest" /> -->
+    <!-- 폰트 어썸 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- SEO -->
     <!-- 썸네일 / 배포 주소 수정하기 -->
     <meta
@@ -40,19 +41,525 @@
     />
     <meta property="og:image" content="우리가 정하는 썸네일" />
     <meta property="og:url" content="우리링크" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- 라이브러리 js -->
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+    <!-- jQuery -->
+    <script src="js/pjeQ.js"></script>
+    <!-- js -->
+    <script src="js/cyj.js"></script>
+    <script src="js/kse.js"></script>
+    <script src="js/pje.js"></script>
   </head>
   <body>
+    <!-- fixed 버튼 -->
+    <div class="fixed_btn">
+      <a href="#"
+        ><img
+          src="image/donate_button.png"
+          alt="후원하기"
+          class="donate_btn"
+        /><span class="donate_txt">후원하러 가기</span></a
+      >
+      <img src="image/goTop_button.png" alt="위로가기" class="go_top_btn" />
+    </div>
+
     <!-- 전체 레이아웃 -->
     <div class="wrap">
       <!-- 헤더 -->
+      <header class="header" id="header">
+        <div class="header_inner">
+          <div class="header_logo">
+            <img
+              src="image/logo_white.png"
+              alt="헤더로고"
+              class="header_logo_white"
+            />
+            <img src="image/logo.png" alt="헤더로고" class="header_logo_img" />
+          </div>
+          <nav class="header_gnb">
+            <ul class="header_menu">
+              <li><a href="#">지구의 목소리</a></li>
+              <li><a href="#">지구수비대</a></li>
+              <li><a href="#">지구소식함</a></li>
+              <li><a href="#">지구수비대 모집</a></li>
+            </ul>
+          </nav>
+          <div class="header_sns">
+            <ul>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-blog"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
       <!-- 메인 비주얼 -->
+      <section class="main_visual" id="main_visual">
+        <video
+          src="image/main_visual.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
+      </section>
       <!-- 스크롤 비주얼 -->
+      <section class="scroll_visual" id="scroll_visual">
+        <div class="parallax">
+          <section class="parallax__header">
+            <div class="parallax__visuals">
+              <div class="parallax__black-line-overflow"></div>
+              <div data-parallax-layers class="parallax__layers">
+                <img
+                  src="image/turtle.png"
+                  loading="eager"
+                  width="800"
+                  data-parallax-layer="1"
+                  alt=""
+                  class="parallax__layer-img"
+                />
+                <img
+                  src="image/trash.png"
+                  loading="eager"
+                  width="800"
+                  data-parallax-layer="2"
+                  alt=""
+                  class="parallax__layer-img trash"
+                />
+              </div>
+              <div class="parallax__fade"></div>
+              <!-- 아래 영역이랑 이어주는 그라데이션 -->
+            </div>
+          </section>
+          <section class="parallax__content"></section>
+        </div>
+        <div class="testBG"></div>
+      </section>
       <!-- 지구의 목소리 -->
+      <div class="earths_voice" id="earths_voice">
+        <div class="earths_voice_inner inner">
+          <!-- 타이틀 -->
+          <h1>지구의 목소리</h1>
+          <!-- 스와이퍼 -->
+          <div class="earths_voice_swiper">
+            <!-- 숲 -->
+            <div class="earths_voice_swiper_box active">
+              <img src="image/forest.png" alt="forest" />
+              <div class="earths_voice_swiper_cont">
+                <i class="fa-solid fa-tree"></i>
+                <div class="earths_voice_swiper_text">
+                  <h3>숲</h3>
+                  <span>숲에 넣을 멘트…</span>
+                </div>
+              </div>
+            </div>
+            <!-- 바다 -->
+            <div class="earths_voice_swiper_box">
+              <img src="image/ocean.png" alt="ocean" />
+              <div class="earths_voice_swiper_cont">
+                <i class="fa-solid fa-water"></i>
+                <div class="earths_voice_swiper_text">
+                  <h3>바다</h3>
+                  <span>바다에 넣을 멘트…</span>
+                </div>
+              </div>
+            </div>
+            <!-- 극지방 -->
+            <div class="earths_voice_swiper_box">
+              <img src="image/polar_region.png" alt="polar_region" />
+              <div class="earths_voice_swiper_cont">
+                <i class="fa-solid fa-snowflake"></i>
+                <div class="earths_voice_swiper_text">
+                  <h3>극지방</h3>
+                  <span>극지방에 넣을 멘트…</span>
+                </div>
+              </div>
+            </div>
+            <!-- 대기 -->
+            <div class="earths_voice_swiper_box">
+              <img src="image/atmosphere.png" alt="atmosphere" />
+              <div class="earths_voice_swiper_cont">
+                <i class="fa-solid fa-wind"></i>
+                <div class="earths_voice_swiper_text">
+                  <h3>대기</h3>
+                  <span>대기에 넣을 멘트…</span>
+                </div>
+              </div>
+            </div>
+            <!-- 인간 -->
+            <div class="earths_voice_swiper_box">
+              <img src="image/human.png" alt="human" />
+              <div class="earths_voice_swiper_cont">
+                <i class="fa-solid fa-person"></i>
+                <div class="earths_voice_swiper_text">
+                  <h3>인간</h3>
+                  <span>인간에 넣을 멘트…</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- 슬로건 -->
+      <section class="slogan" id="slogan">
+        <div class="slogan_inner inner">
+          <div class="slogan_wrap">
+            <div class="slogan_EN">
+              <div class="top">
+                <span>Clean Earth Starts</span>
+              </div>
+              <div class="bottom">
+                <span>With You</span>
+              </div>
+            </div>
+            <div class="slogan_KR">
+              <p>깨끗한 지구는 당신의 실천에서 시작됩니다</p>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- 지구수비대 -->
       <!-- 지구소식함 -->
+      <section class="earths_news" id="earths_news">
+        <h1>지구소식함</h1>
+        <div class="earths_news_inner inner">
+          <!-- 소식 -->
+          <div class="news">
+            <h2>소식</h2>
+            <ul class="news_contents">
+              <!-- 언론보도 -->
+              <li class="active">
+                <p>언론보도</p>
+                <div class="news_desc">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <p>
+                          [보도자료] WWF, “UN 플라스틱 협상 결렬…의미 있는 협약
+                          위해 새로운 접근 필요”
+                        </p>
+                        <p>2025-08-17</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>
+                          [보도자료] 2025 서울어스마라톤, 2만 러너와 ‘지구를
+                          위한 러닝’ 시작된다
+                        </p>
+                        <p>2025-07-24</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>
+                          [기획] 쇼핑하면 제주 바다거북 살려요… 환경도 ‘클릭
+                          기부’ 시대
+                        </p>
+                        <p>2025-07-01</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>
+                          [참고자료] 기후변화와 플라스틱 오염 속, 바다거북의
+                          위기
+                        </p>
+                        <p>2025-05-23</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>
+                          [기획] “‘폰게임’ 했을 뿐인데” 섬뜩한 위협
+                          느꼈다…게임에 숨은 ‘현실’, 뭐길래? [지구, 뭐래?]
+                        </p>
+                        <p>2025-05-22</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- 소식 -->
+              <li>
+                <p>소식</p>
+                <div class="news_desc">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <p>
+                          [소식] WWF, 한국 코카-콜라와 함께 '원더플 6 캠퍼스
+                          챌린지' 진행
+                        </p>
+                        <p>2025-08-26</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>
+                          [소식] WWF, 서산 가로림만 점박이물법 서식지 보전 활동
+                          추진
+                        </p>
+                        <p>2025-08-18</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>
+                          [소식] WWF, 롯데마트와 ASC 인증 수산물을 활용한
+                          쿠킹클래스 성료
+                        </p>
+                        <p>2025-08-11</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>[소식] 2025 서울어스마라톤 특별 참가자 모집</p>
+                        <p>2025-08-04</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>
+                          [소식] WWF-컴투스, 국제 멸종위기종 서식지 보전 기부금
+                          전달
+                        </p>
+                        <p>2025-07-31</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- 판다뉴스 -->
+              <li>
+                <p>판다뉴스</p>
+                <div class="news_desc">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <p>
+                          [8월 판다뉴스] 해조류부터 바다숲까지, 블루카본의 미래
+                        </p>
+                        <p>2025-08-28</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>[7월 판다뉴스] 위기 극복의 열쇠, 자연</p>
+                        <p>2025-07-24</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>[6월 판다뉴스] 바다거북과 플라스틱</p>
+                        <p>2025-06-26</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>[5월 판다뉴스] 생명을 이어주는 메신저</p>
+                        <p>2025-05-29</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>[4월 판다뉴스]인간에 대한 야생동물의 기여</p>
+                        <p>2025-04-24</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <a href="#">View More +</a>
+          </div>
+          <!-- 서명하기 -->
+          <div class="sign">
+            <div class="sign_top">
+              <h2>서명하기</h2>
+              <a href="campaign.html">서명 현황보기 +</a>
+            </div>
+            <div class="sign_desc">
+              <p>플라스틱 오염을 끝내는 국제 협약을 위해 서명해주세요!</p>
+            </div>
+            <!-- 서명 스와이퍼 -->
+            <div class="swiper sign_swiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <p>김**</p>
+                  <p>자연보호에 동참합니다.</p>
+                  <p>2025-09-05</p>
+                </li>
+                <li class="swiper-slide">
+                  <p>박**</p>
+                  <p>자연보호에 동참합니다.</p>
+                  <p>2025-09-05</p>
+                </li>
+                <li class="swiper-slide">
+                  <p>이**</p>
+                  <p>자연보호에 동참합니다.</p>
+                  <p>2025-09-07</p>
+                </li>
+                <li class="swiper-slide">
+                  <p>최**</p>
+                  <p>자연보호에 동참합니다.</p>
+                  <p>2025-09-07</p>
+                </li>
+                <li class="swiper-slide">
+                  <p>유**</p>
+                  <p>자연보호에 동참합니다.</p>
+                  <p>2025-09-07</p>
+                </li>
+                <li class="swiper-slide">
+                  <p>김**</p>
+                  <p>자연보호에 동참합니다.</p>
+                  <p>2025-09-07</p>
+                </li>
+                <li class="swiper-slide">
+                  <p>진**</p>
+                  <p>자연보호에 동참합니다.</p>
+                  <p>2025-09-10</p>
+                </li>
+                <li class="swiper-slide">
+                  <p>손**</p>
+                  <p>자연보호에 동참합니다.</p>
+                  <p>2025-09-10</p>
+                </li>
+                <li class="swiper-slide">
+                  <p>채**</p>
+                  <p>자연보호에 동참합니다.</p>
+                  <p>2025-09-10</p>
+                </li>
+                <li class="swiper-slide">
+                  <p>한**</p>
+                  <p>자연보호에 동참합니다.</p>
+                  <p>2025-09-13</p>
+                </li>
+                <li class="swiper-slide">
+                  <p>유**</p>
+                  <p>자연보호에 동참합니다.</p>
+                  <p>2025-09-13</p>
+                </li>
+                <li class="swiper-slide">
+                  <p>임**</p>
+                  <p>자연보호에 동참합니다.</p>
+                  <p>2025-09-13</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sign_input">
+              <input type="text" placeholder="자연보호 서명에 동참하기" />
+              <button>서명하기</button>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- 지구수비대 모집 -->
+      <section class="protector_subs" id="protector_subs">
+        <div class="protector_subs_inner inner">
+          <h1 class="pro_subs_h1">지구수비대 모집</h1>
+          <div class="pro_subs_wrap">
+            <div class="protector_subs_left">
+              <div class="pro_subs_title">
+                <p>우리는 지구라는 행성에서</p>
+                <p>하나의 자연을 공유하며 살아갑시다.</p>
+              </div>
+              <!-- <ul class="protector_subs_donation">
+                <li>20,000원</li>
+                <li>30,000원</li>
+                <li>50,000원</li>
+              </ul> -->
+              <div class="pro_subs_btn">
+                <button data-img="image/goods_bag.jpg" class="goods_btn">
+                  20,000원
+                </button>
+                <button data-img="image/goods_bracelet.jpg" class="goods_btn">
+                  30,000원
+                </button>
+                <button data-img="image/goods_keyring.jpg" class="goods_btn">
+                  50,000원
+                </button>
+              </div>
+              <div class="pro_subs_email">
+                <p>이메일</p>
+                <input
+                  type="text"
+                  placeholder="이메일을 입력하세요"
+                  class="email"
+                />
+                <button class="subscribe">구독하기</button>
+              </div>
+              <div class="pro_subs_txt">
+                <p class="guideTxt">
+                  환경 보전에 동참해주신 분들께 감사 굿즈를 보내드립니다.
+                </p>
+                <p class="guideTxt">
+                  입력하신 메일 주소로 굿즈를 전달 받으실 배송지 입력 폼을 전달
+                  드립니다
+                </p>
+              </div>
+            </div>
+
+            <div class="protector_subs_right">
+              <img src="image/goods_bag.jpg" alt="bag" id="goods_img" />
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- 푸터 -->
+      <div class="footer" id="footer">
+        <div class="footer_top">
+          <ul>
+            <li>후원회원규정</li>
+            <li>개인정보처리방침</li>
+            <li>자주묻는질문</li>
+            <li>문의</li>
+          </ul>
+        </div>
+        <hr />
+        <div class="footer_bottom">
+          <div class="footer_bottom_left">
+            <img src="image/logo.png" alt="팬더logo" />
+          </div>
+          <div class="footer_bottom_right">
+            <p class="korea_Head_Office1">한국WWF (세계자연기금 한국본부)</p>
+            <p class="korea_Head_Office2">
+              대표자 홍정욱 고유번호 101-82-23485 주소 서울특별시 종로구 종로 47
+              (공평동) SC제일은행본점빌딩 15층 WWF (세계자연기금) 대표전화
+              02-722-1601 (운영시간 09-18시)
+            </p>
+            <p>
+              후원 문의 members@wwfkorea.or.kr 기업 문의
+              partnership@wwfkorea.or.kr 홍보 및 마케팅 문의
+              marketing@wwfkorea.or.kr
+            </p>
+            <p class="lastTxt">
+              © 2021 WWF - World Wide Fund For Nature (also known as World
+              Wildlife Fund). <span>Creative Commons licence.</span>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

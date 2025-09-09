@@ -10,6 +10,7 @@
 @import url(earths_news.css);
 @import url(protector_subs.css);
 @import url(footer.css);
+@import url(campaign.css);
 
 /* 폰트 */
 @font-face {
@@ -23,6 +24,25 @@
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
     format("woff");
   font-display: swap;
+}
+@font-face {
+  font-family: "KkuBulLim";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/BMkkubulimTTF-Regular.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+/* fixed 버튼 */
+@keyframes topdown {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 /* style */
@@ -49,8 +69,68 @@
   --spacing--medium: 60px;
   --spacing--small: 25px;
 }
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #1c1c1c;
+}
 
 .inner {
   width: 1320px;
   margin: auto;
+}
+
+/* fixed 버튼 */
+.fixed_btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  z-index: 999999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.donate_btn {
+  width: 80px;
+  /* margin-bottom: 20px; */
+  display: block;
+  animation: topdown 1s infinite ease-in-out;
+}
+.go_top_btn {
+  width: 60px;
+  cursor: pointer;
+}
+
+.fixed_btn.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.fixed_btn span {
+  position: absolute;
+  top: 23px;
+  right: 90px;
+  padding: 8px 18px;
+  font-family: "Paperozi";
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 23px;
+  text-align: center;
+  box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  white-space: nowrap;
+  transition: all 0.5s;
+}
+.donate_btn:hover + span {
+  opacity: 1;
+  visibility: visible;
 }

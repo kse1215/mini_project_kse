@@ -1,18 +1,11 @@
 @charset "utf-8";
-/* 폰트 (나중에 메인에 추가) */
-@font-face {
-  font-family: "KkuBulLim";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/BMkkubulimTTF-Regular.woff2")
-    format("woff2");
-  font-display: swap;
-}
 .slogan {
   position: relative;
   overflow: hidden;
   height: 100vh;
 }
 /* 이미지 */
-.slogan_bg_imgs {
+.slogan_bg_img {
   position: absolute;
   top: 0;
   left: 0;

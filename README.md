@@ -24,4 +24,3 @@
     />
     <!-- 소셜 미디어에서 페이지가 공유될 때 사용되는 설명 -->
     <meta property="og:description" content="HAY.com" />
-# mini_project_kse

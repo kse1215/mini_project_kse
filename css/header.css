@@ -1,1 +1,155 @@
 @charset "utf-8";
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.header {
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+}
+.header_inner {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+.header_logo {
+  width: 5%;
+  height: 100%;
+  padding: 10px;
+}
+
+.header_logo > img {
+  height: 90%;
+}
+.header_logo_img {
+  display: none;
+}
+.header_gnb {
+  width: 70%;
+}
+.header_menu {
+  display: flex;
+  width: 100%;
+}
+.header_menu > li {
+  text-align: center;
+  width: calc(100% / 4);
+}
+.header_menu > li > a {
+  font-family: "Paperozi";
+  font-weight: 600;
+  font-size: clamp(16px, 1.5vw, var(--text--header));
+  color: #fff;
+}
+
+.header_sns > ul {
+  display: flex;
+  gap: clamp(15px, 2vw, var(--spacing--small));
+}
+.header_sns > ul > li > a > i {
+  font-size: clamp(16px, 2vw, 27px);
+  color: #fff;
+}
+
+/* 스크롤해서 3240px 됐을때 */
+.header.scroll {
+  background-color: #fff;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+}
+.header.scroll .header_menu > li > a {
+  color: var(--color--font--black);
+}
+.header.scroll .header_logo_img {
+  display: block;
+}
+.header.scroll .header_logo_white {
+  display: none;
+}
+.header.scroll .header_sns > ul > li > a > i {
+  color: var(--color--font--black);
+}
+
+/* 햄버거바 */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+.hamburger > span {
+  display: block;
+  width: 20px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+/* 모바일메뉴 */
+.moblie_menu {
+  width: 350px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  padding: 50px;
+  transition: all 0.6s ease-in-out;
+}
+.moblie_menu.active {
+  left: calc(100% - 350px);
+}
+.mo_close {
+  position: absolute;
+  top: 40px;
+  right: 20%;
+  cursor: pointer;
+}
+.mo_close > i {
+  font-size: 20px;
+  color: #fff;
+}
+.mo_menu {
+  margin-top: 20px;
+}
+.mo_menu > li > a {
+  color: #fff;
+  display: block;
+  font-family: "Paperozi";
+  font-size: 20px;
+  font-weight: 500;
+  padding: 20px 0;
+}
+.mo_menu > li > a.active {
+  font-weight: 800;
+}
+.mo_sns {
+  margin-top: 20px;
+  display: flex;
+  gap: var(--spacing--small);
+}
+.mo_sns > li > a > i {
+  font-size: 16px;
+  color: #fff;
+}
+
+/* 반응형 */
+@media all and (max-width: 1000px) {
+  .header_gnb {
+    display: none;
+  }
+  .header_sns {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}

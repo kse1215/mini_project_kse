@@ -6,86 +6,21 @@
     format("woff2");
   font-display: swap;
 }
-/* .slogan {
-  background: url("../image/slogan_bee.gif") no-repeat center / auto,
-  url("../image/slogan_penguin1.gif") no-repeat right top / auto;
-  background-size: 1000px, 650px;
-} */
- .slogan{
+.slogan {
   position: relative;
   overflow: hidden;
   height: 100vh;
- }
- /* 이미지 */
- .slogan_bg_imgs{
+}
+/* 이미지 */
+.slogan_bg_imgs {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 0;
-  /* pointer-events: none; */
- }
- .bg_img{
-  position: absolute;
-  width: 250px;
- }
-/* .img_bee {
-  top: 0px;
-  left: 0px;
-  width: 120px;
 }
-.img_dolphin1 {
-  top: 0px;
-  right: 0px;
-  width: 200px;
-}
-.img_dolphin2 {
-  bottom: 0px;
-  right: 0px;
-  width: 180px;
-}
-.img_flower1 {
-  bottom: 0px;
-  left: 0px;
-  width: 150px;
-}
-.img_flower2 {
-  top: 0px;
-  left: 0px;
-  width: 130px;
-}
-.img_panda {
-  bottom: 0px;
-  left: 0px;
-  width: 200px;
-}
-.img_penguin1 {
-  bottom: 0px;
-  right: 0px;
-  width: 160px;
-}
-.img_penguin2 {
-  bottom: 0px;
-  right: 0px;
-  width: 140px;
-}
-.img_tiger {
-  top: 0px;
-  left: 0px;
-  width: 220px;
-}
-.img_turtle {
-  bottom: 0px;
-  left: 0px;
-  width: 150px;
-}
-.img_bear {
-  top: 0px;
-  right: 0px;
-  width: 220px;
-} */
- /* 텍스트 */
+/* 텍스트 */
 .slogan_wrap {
   position: relative;
   z-index: 1;

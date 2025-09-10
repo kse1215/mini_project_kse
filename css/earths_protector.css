@@ -1,10 +1,8 @@
 @charset "utf-8";
 .earths_protector_inner {
   position: relative;
-  width: 100%;
-  max-width: 1300px;
   margin: auto;
-  padding: var(--spacing--large) 0;
+  padding-bottom: var(--spacing--large);
 }
 /* 타이틀 */
 .earths_protector_inner h1 {
@@ -18,44 +16,54 @@
 /* 스와이퍼 */
 .earths_protector_swiper {
   width: 100%;
-  max-width: 900px;
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
-.earths_protector_swiper .swiper_slide {
+.earths_protector_swiper .swiper-slide {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5% 5% 0 5%;
+  padding: 5% 5% 5% 5%;
   background-position: center;
   background-size: cover;
   aspect-ratio: 1/1;
   overflow: hidden;
   transition: all 0.3s;
-  /* background-color: black; */
+  background-color: #fff;
 }
-.earths_protector_swiper .swiper_slide img {
+.earths_protector_swiper .swiper-slide img {
   width: 80%; /* 이미지 80% */
   height: auto;
   display: block;
   object-fit: contain;
-  /* filter: brightness(0.6); */
   transition: all 0.3s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
 }
 
 /* 가운데 활성화된 슬라이드만 원래 크기 */
-.earths_protector_swiper .swiper_slide_active img {
+.earths_protector_swiper .swiper-slide-active img {
   filter: brightness(1.2);
 }
 
 /* 앞뒤 슬라이드는 살짝 크게 (옵션) */
-.earths_protector_swiper .swiper_slide_prev,
-.earths_protector_swiper .swiper_slide_next {
+.earths_protector_swiper .swiper-slide-prev,
+.earths_protector_swiper .swiper-slide-next {
   z-index: 5;
 }
-.earths_protector_swiper .swiper_slide > p {
-  color: #fff;
+.earths_protector_swiper .swiper-slide > p {
+  position: absolute;
+  bottom: 45px;
+  left: 130px;
   text-align: center;
-  padding: 20px;
+  padding: 8px 20px;
+  border-radius: 40px;
+  font-family: "Pretendard";
+}
+.earths_protector_swiper .swiper-slide > .ongoing{
+  color: #fff;
+  background-color: var(--color--main);
+}
+.earths_protector_swiper .swiper-slide > .finished{
+  color: var(--color--font--sub);
+  background-color: #eee;
 }

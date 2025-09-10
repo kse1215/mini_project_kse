@@ -10,8 +10,6 @@ window.addEventListener("load", function () {
   });
 
   // 지구수비대
-
-  // 스와이퍼 ex
   var swiper = new Swiper(".earths_protector_swiper", {
     effect: "coverflow",
     grabCursor: true,
@@ -23,7 +21,7 @@ window.addEventListener("load", function () {
       stretch: 0,
       depth: 200,
       modifier: 2.5,
-      slideShadows: true,
+      slideShadows: false,
     },
     loop: true, // 무한 반복
     autoplay: {

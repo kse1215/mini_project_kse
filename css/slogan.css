@@ -2,7 +2,8 @@
 .slogan {
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  /* height: 100vh; */
+  scroll-margin-top: 100px;
 }
 /* 이미지 */
 .slogan_bg_img {
@@ -10,7 +11,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   z-index: 0;
 }
 /* 텍스트 */
@@ -59,11 +60,17 @@
 
 /* 반응형 */
 @media (max-width: 1280px) {
-
+  .inner {
+    width: 1200px !important;
+  }
 }
 @media (max-width: 768px) {
-
+  .inner {
+    width: 680px !important;
+  }
 }
 @media (max-width: 390px) {
-
+  .inner {
+    width: 300px !important;
+  }
 }

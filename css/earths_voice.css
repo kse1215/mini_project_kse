@@ -1,6 +1,7 @@
 @charset "utf-8";
 .earths_voice {
   background-color: #000;
+  scroll-margin-top: 100px;
 }
 /* 타이틀 */
 .earths_voice_inner h1 {
@@ -109,15 +110,41 @@
   color: #fff;
   z-index: 2;
 }
+.earths_voice_swiper_text span .mo{
+    display: none;
+}
 
 /* 반응형 */
-@media (max-width: 1280px) {
+@media all and (max-width: 1280px) {
+  .inner {
+    width: 1200px !important;
+  }
   /* 스와이퍼 */
   .earths_voice_swiper {
-    max-width: 100%;
+    max-width: 1000px;
+    height: 500px;
+  }
+  .earths_voice_swiper_box.active {
+    flex: 6; /* 너무 크게 안 늘어나도록 비율 조정 */
   }
 }
-@media (max-width: 768px) {
+/* @media all and (max-width: 1024px) {
+  .inner {
+    width: 980px !important;
+  } */
+  /* 스와이퍼 */
+  /* .earths_voice_swiper {
+    max-width: 800px;
+    height: 450px;
+  }
+  .earths_voice_swiper_box.active {
+    flex: 5;
+  }
+} */
+@media all and (max-width: 768px) {
+  .inner {
+    width: 680px !important;
+  }
   /* 스와이퍼 */
   .earths_voice_swiper {
     flex-direction: column; /* 세로 정렬 */
@@ -126,16 +153,34 @@
   }
   .earths_voice_swiper_box {
     flex: none;
-    height: 200px; /* 높이 고정 */
+    height: 100px; /* 닫혔을 때 높이 */
+    transition: height 0.5s;
   }
   .earths_voice_swiper_box.active {
     flex: none;
-    height: 600px; /* 클릭 시 살짝 크게 */
+    height: 450px; /* 클릭 시 높이 */
   }
 }
-@media (max-width: 390px) {
+@media all and (max-width: 390px) {
+  .inner {
+    width: 300px !important;
+  }
   /* 스와이퍼 */
   .earths_voice_swiper {
-    max-width: 390px;
+    flex-direction: column; /* 세로 정렬 */
+    height: auto;
+    max-width: 100%;
   }
+  .earths_voice_swiper_box {
+    flex: none;
+    height: 100px; /* 닫혔을 때 높이 */
+    transition: height 0.5s;
+  }
+  .earths_voice_swiper_box.active {
+    flex: none;
+    height: 450px; /* 클릭 시 높이 */
+  }
+  .earths_voice_swiper_text span .mo{
+    display: block;
+}
 }

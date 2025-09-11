@@ -29,4 +29,8 @@ window.addEventListener("load", function () {
       disableOnInteraction: false,
     },
   });
+  const link = this.document.querySelector(".event_link");
+  link.addEventListener("click", () => {
+    this.window.location.href = "event.html";
+  });
 });

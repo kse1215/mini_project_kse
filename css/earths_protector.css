@@ -1,4 +1,7 @@
 @charset "utf-8";
+.earths_protector {
+  scroll-margin-top: 100px;
+}
 .earths_protector_inner {
   position: relative;
   margin: auto;
@@ -59,11 +62,11 @@
   border-radius: 40px;
   font-family: "Pretendard";
 }
-.earths_protector_swiper .swiper-slide > .ongoing{
+.earths_protector_swiper .swiper-slide > .ongoing {
   color: #fff;
   background-color: var(--color--main);
 }
-.earths_protector_swiper .swiper-slide > .finished{
+.earths_protector_swiper .swiper-slide > .finished {
   color: var(--color--font--sub);
   background-color: #eee;
 }

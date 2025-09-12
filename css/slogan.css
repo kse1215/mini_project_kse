@@ -2,27 +2,30 @@
 .slogan {
   position: relative;
   overflow: hidden;
-  /* height: 100vh; */
+  height: 100vh;
   scroll-margin-top: 100px;
 }
 /* 이미지 */
-.slogan_bg_img {
+.slogan_bg_imgs {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  /* height: 100%; */
   z-index: 0;
+}
+.slogan_bg_imgs .slogan_1280px {
+  display: none;
 }
 /* 텍스트 */
 .slogan_wrap {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
-  padding: var(--spacing--large) 0;
   width: 100%;
 }
 .slogan_EN {
-  padding-top: 220px;
   text-align: center;
 }
 .slogan_EN span {
@@ -44,14 +47,12 @@
   background-color: var(--color--sub);
 }
 .slogan_KR {
-  padding-bottom: 170px;
   margin-top: 30px;
+  text-align: center;
 }
 .slogan_KR p {
-  width: 65%;
-  /* display: inline; */
-  text-align: center;
-  margin: auto;
+  display: inline-block;
+  padding: 0 10px;
   font-family: "Pretendard";
   font-size: var(--text--heading--h1);
   font-weight: 600;
@@ -60,17 +61,39 @@
 
 /* 반응형 */
 @media (max-width: 1280px) {
-  .inner {
-    width: 1200px !important;
+  .slogan_bg_imgs .slogan_1920px {
+    display: none;
+  }
+  .slogan_bg_imgs .slogan_1280px {
+    display: block;
+    width: 100%;
   }
 }
 @media (max-width: 768px) {
-  .inner {
-    width: 680px !important;
+  /* 이미지 */
+  .slogan_bg_imgs {
+    display: none;
+  }
+  /* 텍스트 */
+  .slogan_EN span {
+    font-size: 50px;
+  }
+  .slogan_EN .bottom {
+    margin-top: 50px;
+  }
+  .slogan_KR p {
+    font-size: 23px;
   }
 }
 @media (max-width: 390px) {
-  .inner {
-    width: 300px !important;
+  /* 텍스트 */
+  .slogan_EN span {
+    font-size: 30px;
+  }
+  .slogan_EN .bottom {
+    margin-top: 40px;
+  }
+  .slogan_KR p {
+    font-size: 18px;
   }
 }

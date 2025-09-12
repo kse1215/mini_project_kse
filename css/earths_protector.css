@@ -1,6 +1,7 @@
 @charset "utf-8";
 .earths_protector {
   scroll-margin-top: 100px;
+  background-color: aliceblue;
 }
 .earths_protector_inner {
   position: relative;
@@ -31,7 +32,7 @@
   /* aspect-ratio: 1/1; */
   overflow: hidden;
   transition: all 0.3s;
-  background-color: #fff;
+  background-color: aliceblue;
 }
 .earths_protector_swiper .swiper-slide img {
   width: 80%; /* 이미지 80% */
@@ -73,12 +74,12 @@
 
 /* 반응형 */
 @media (max-width: 1280px) {
-  .inner {
+  .earths_protector_inner {
     width: 1200px !important;
   }
 }
 @media (max-width: 768px) {
-  .inner {
+  .earths_protector_inner {
     width: 680px !important;
   }
   .earths_protector_swiper .swiper-slide > p {
@@ -88,7 +89,7 @@
   }
 }
 @media (max-width: 390px) {
-  .inner {
+  .earths_protector_inner {
     width: 350px !important;
   }
   .earths_protector_swiper .swiper-slide > p {

@@ -31,7 +31,7 @@ window.addEventListener("load", function () {
 
     // 반응형 설정
     breakpoints: {
-      1920:{
+      1920: {
         slidesPerView: 2,
         spaceBetween: 30,
       },

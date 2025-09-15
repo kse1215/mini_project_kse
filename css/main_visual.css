@@ -1,7 +1,7 @@
 @charset "utf-8";
 .main_visual {
-  width: 100vw;
-  height: 1080px;
+  width: 100%;
+  height: clamp(300px , 55vw , 1080px);
   overflow: hidden;
 }
 .main_visual > video {
@@ -9,21 +9,4 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
-
-/* 반응형 */
-@media all and (max-width: 1200px) {
-  .main_visual {
-    height: 800px;
-  }
-}
-@media all and (max-width: 768px) {
-  .main_visual {
-    height: 500px;
-  }
-}
-@media all and (max-width: 390px) {
-  .main_visual {
-    height: 300px;
-  }
 }

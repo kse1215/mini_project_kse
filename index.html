@@ -28,7 +28,7 @@
       referrerpolicy="no-referrer"
     />
     <!-- SEO -->
-    <!-- 썸네일 / 배포 주소 수정하기 -->
+    <!-- 썸네일 수정하기 -->
     <meta
       name="description"
       content="세계 최대 비영리 국제 자연보전기관, 생물다양성과 자연 서식지 보전, 기후위기 대응, 지속가능 금융, 지속가능한 비즈니스 및 시장 변화"
@@ -39,8 +39,11 @@
       property="og:description"
       content="세계 최대 비영리 국제 자연보전기관, 생물다양성과 자연 서식지 보전, 기후위기 대응, 지속가능 금융, 지속가능한 비즈니스 및 시장 변화"
     />
-    <meta property="og:image" content="우리가 정하는 썸네일" />
-    <meta property="og:url" content="우리링크" />
+    <meta
+      property="og:image"
+      content="http://127.0.0.1:5504/image/seo_thumbnail.png"
+    />
+    <meta property="og:url" content="https://mini-project-wwf.vercel.app" />
     <!-- css -->
     <link rel="stylesheet" href="css/main.css" />
     <link
@@ -59,6 +62,7 @@
     <script src="js/cyj.js"></script>
     <script src="js/kse.js"></script>
     <script src="js/pje.js"></script>
+    <script src="js/kmj.js"></script>
   </head>
   <body>
     <!-- fixed 버튼 -->
@@ -68,15 +72,16 @@
           src="image/donate_button.png"
           alt="후원하기"
           class="donate_btn"
-        /><span class="donate_txt">후원하러 가기</span></a
+        /><span class="donate_txt">후원하고 굿즈 받기</span></a
       >
       <img src="image/goTop_button.png" alt="위로가기" class="go_top_btn" />
     </div>
-
+    <!-- seo 썸네일 -->
+    <!-- <img src="image/seo_thumbnail.png" alt="seo썸네일" /> -->
     <!-- 전체 레이아웃 -->
     <div class="wrap">
       <!-- 헤더 -->
-      <header class="header" id="header">
+      <header class="header">
         <div class="header_inner">
           <div class="header_logo">
             <img
@@ -88,32 +93,84 @@
           </div>
           <nav class="header_gnb">
             <ul class="header_menu">
-              <li><a href="#">지구의 목소리</a></li>
-              <li><a href="#">지구수비대</a></li>
-              <li><a href="#">지구소식함</a></li>
-              <li><a href="#">지구수비대 모집</a></li>
+              <li><a href="#earths_voice">지구의 목소리</a></li>
+              <li><a href="#earths_protector">지구수비대</a></li>
+              <li><a href="#earths_news">지구소식함</a></li>
+              <li><a href="#protector_subs">지구수비대 모집</a></li>
             </ul>
           </nav>
           <div class="header_sns">
             <ul>
               <li>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.instagram.com/wwfkorea/" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
               </li>
               <li>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.facebook.com/WWFKorea/" target="_blank">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
               </li>
               <li>
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a
+                  href="https://www.youtube.com/c/WWFKorea/featured"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
               </li>
               <li>
-                <a href="#"><i class="fa-solid fa-blog"></i></a>
+                <a href="https://blog.naver.com/wwf-korea" target="_blank">
+                  <i class="fa-solid fa-blog"></i>
+                </a>
               </li>
             </ul>
           </div>
+          <!-- 햄버거바 -->
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </header>
+      <!-- 모바일 메뉴 -->
+      <nav class="moblie_menu">
+        <button class="mo_close"><i class="fa-solid fa-xmark"></i></button>
+        <ul class="mo_menu">
+          <li><a href="#earths_voice">지구의 목소리</a></li>
+          <li><a href="#earths_protector">지구수비대</a></li>
+          <li><a href="#earths_news">지구소식함</a></li>
+          <li><a href="#protector_subs">지구수비대 모집</a></li>
+        </ul>
+        <ul class="mo_sns">
+          <li>
+            <a href="https://www.instagram.com/wwfkorea/" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/WWFKorea/" target="_blank">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/c/WWFKorea/featured"
+              target="_blank"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://blog.naver.com/wwf-korea" target="_blank">
+              <i class="fa-solid fa-blog"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
       <!-- 메인 비주얼 -->
-      <section class="main_visual" id="main_visual">
+      <section class="main_visual">
         <video
           src="image/main_visual.mp4"
           autoplay
@@ -123,7 +180,7 @@
         ></video>
       </section>
       <!-- 스크롤 비주얼 -->
-      <section class="scroll_visual" id="scroll_visual">
+      <section class="scroll_visual">
         <div class="parallax">
           <section class="parallax__header">
             <div class="parallax__visuals">
@@ -152,6 +209,7 @@
           </section>
           <section class="parallax__content"></section>
         </div>
+        <!-- 밑에 검은 배경영역 추가 -->
         <div class="testBG"></div>
       </section>
       <!-- 지구의 목소리 -->
@@ -168,7 +226,10 @@
                 <i class="fa-solid fa-tree"></i>
                 <div class="earths_voice_swiper_text">
                   <h3>숲</h3>
-                  <span>숲에 넣을 멘트…</span>
+                  <span
+                    >이산화탄소의 주요 흡수원인 숲, <br class="mo" />함께
+                    지켜주세요.</span
+                  >
                 </div>
               </div>
             </div>
@@ -179,7 +240,10 @@
                 <i class="fa-solid fa-water"></i>
                 <div class="earths_voice_swiper_text">
                   <h3>바다</h3>
-                  <span>바다에 넣을 멘트…</span>
+                  <span
+                    >생물들의 삶의 터전인 바다, <br class="mo" />함께
+                    지켜주세요.</span
+                  >
                 </div>
               </div>
             </div>
@@ -190,7 +254,10 @@
                 <i class="fa-solid fa-snowflake"></i>
                 <div class="earths_voice_swiper_text">
                   <h3>극지방</h3>
-                  <span>극지방에 넣을 멘트…</span>
+                  <span
+                    >빠르게 녹는 빙하와 만년설, <br class="mo" />함께
+                    지켜주세요.</span
+                  >
                 </div>
               </div>
             </div>
@@ -201,7 +268,10 @@
                 <i class="fa-solid fa-wind"></i>
                 <div class="earths_voice_swiper_text">
                   <h3>대기</h3>
-                  <span>대기에 넣을 멘트…</span>
+                  <span
+                    >자원의 무분별한 사용, <br class="mo" />이상기후의
+                    주원인입니다.</span
+                  >
                 </div>
               </div>
             </div>
@@ -212,7 +282,10 @@
                 <i class="fa-solid fa-person"></i>
                 <div class="earths_voice_swiper_text">
                   <h3>인간</h3>
-                  <span>인간에 넣을 멘트…</span>
+                  <span
+                    >생태계 파괴, 우리에게 <br class="mo" />더 큰 재앙이 되어
+                    돌아옵니다.</span
+                  >
                 </div>
               </div>
             </div>
@@ -221,6 +294,20 @@
       </div>
       <!-- 슬로건 -->
       <section class="slogan" id="slogan">
+        <!-- 이미지 -->
+        <div class="slogan_bg_imgs">
+          <img
+            src="image/slogan_1920px.gif"
+            class="slogan_1920px"
+            alt="animal"
+          />
+          <img
+            src="image/slogan_1280px.gif"
+            class="slogan_1280px"
+            alt="animal"
+          />
+        </div>
+        <!-- 텍스트 -->
         <div class="slogan_inner inner">
           <div class="slogan_wrap">
             <div class="slogan_EN">
@@ -238,6 +325,45 @@
         </div>
       </section>
       <!-- 지구수비대 -->
+      <div class="earths_protector" id="earths_protector">
+        <div class="earths_protector_inner inner">
+          <!-- 타이틀 -->
+          <h1>지구수비대</h1>
+          <!-- 스와이퍼 -->
+          <div class="swiper earths_protector_swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide event_link">
+                <img src="image/poster_250919.png" alt="포스터1" />
+                <p class="ongoing">현재 진행중</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="image/poster_250921.png" alt="포스터2" />
+                <p class="ongoing">현재 진행중</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="image/poster_250523.png" alt="포스터3" />
+                <p class="finished">진행 종료</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="image/poster_250520.png" alt="포스터4" />
+                <p class="finished">진행 종료</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="image/poster_250322.png" alt="포스터5" />
+                <p class="finished">진행 종료</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="image/poster_241204.png" alt="포스터6" />
+                <p class="finished">진행 종료</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="image/poster_240927.png" alt="포스터7" />
+                <p class="finished">진행 종료</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- 지구소식함 -->
       <section class="earths_news" id="earths_news">
         <h1>지구소식함</h1>
@@ -390,7 +516,7 @@
                 </div>
               </li>
             </ul>
-            <a href="#">View More +</a>
+            <a href="#">More +</a>
           </div>
           <!-- 서명하기 -->
           <div class="sign">
@@ -476,8 +602,8 @@
       </section>
       <!-- 지구수비대 모집 -->
       <section class="protector_subs" id="protector_subs">
+        <h1 class="pro_subs_h1">지구수비대 모집</h1>
         <div class="protector_subs_inner inner">
-          <h1 class="pro_subs_h1">지구수비대 모집</h1>
           <div class="pro_subs_wrap">
             <div class="protector_subs_left">
               <div class="pro_subs_title">
@@ -490,15 +616,25 @@
                 <li>50,000원</li>
               </ul> -->
               <div class="pro_subs_btn">
-                <button data-img="image/goods_bag.jpg" class="goods_btn">
+                <button
+                  data-img="image/goods_bracelet.jpg"
+                  class="goods_btn active"
+                >
                   20,000원
                 </button>
-                <button data-img="image/goods_bracelet.jpg" class="goods_btn">
+                <button data-img="image/goods_eco.png" class="goods_btn">
                   30,000원
                 </button>
-                <button data-img="image/goods_keyring.jpg" class="goods_btn">
+                <button data-img="image/goods_bag.jpg" class="goods_btn">
                   50,000원
                 </button>
+              </div>
+              <div class="tab_thumb">
+                <img
+                  src="image/goods_bracelet.jpg"
+                  alt="bag"
+                  id="tab_thumb_img"
+                />
               </div>
               <div class="pro_subs_email">
                 <p>이메일</p>
@@ -510,53 +646,54 @@
                 <button class="subscribe">구독하기</button>
               </div>
               <div class="pro_subs_txt">
-                <p class="guideTxt">
-                  환경 보전에 동참해주신 분들께 감사 굿즈를 보내드립니다.
-                </p>
-                <p class="guideTxt">
+                <p>환경 보전에 동참해주신 분들께 감사 굿즈를 보내드립니다.</p>
+                <p>
                   입력하신 메일 주소로 굿즈를 전달 받으실 배송지 입력 폼을 전달
-                  드립니다
+                  드립니다.
                 </p>
               </div>
             </div>
-
-            <div class="protector_subs_right">
-              <img src="image/goods_bag.jpg" alt="bag" id="goods_img" />
+            <div class="protector_subs_right web_thumb">
+              <img src="image/goods_bracelet.jpg" alt="bag" id="goods_img" />
             </div>
           </div>
         </div>
       </section>
       <!-- 푸터 -->
-      <div class="footer" id="footer">
-        <div class="footer_top">
-          <ul>
-            <li>후원회원규정</li>
-            <li>개인정보처리방침</li>
-            <li>자주묻는질문</li>
-            <li>문의</li>
-          </ul>
-        </div>
-        <hr />
-        <div class="footer_bottom">
-          <div class="footer_bottom_left">
-            <img src="image/logo.png" alt="팬더logo" />
+      <div class="footer">
+        <div class="footer_inner inner">
+          <div class="footer_top">
+            <ul>
+              <li>후원회원규정</li>
+              <li>개인정보처리방침</li>
+              <li>자주묻는질문</li>
+              <li>문의</li>
+            </ul>
           </div>
-          <div class="footer_bottom_right">
-            <p class="korea_Head_Office1">한국WWF (세계자연기금 한국본부)</p>
-            <p class="korea_Head_Office2">
-              대표자 홍정욱 고유번호 101-82-23485 주소 서울특별시 종로구 종로 47
-              (공평동) SC제일은행본점빌딩 15층 WWF (세계자연기금) 대표전화
-              02-722-1601 (운영시간 09-18시)
-            </p>
-            <p>
-              후원 문의 members@wwfkorea.or.kr 기업 문의
-              partnership@wwfkorea.or.kr 홍보 및 마케팅 문의
-              marketing@wwfkorea.or.kr
-            </p>
-            <p class="lastTxt">
-              © 2021 WWF - World Wide Fund For Nature (also known as World
-              Wildlife Fund). <span>Creative Commons licence.</span>
-            </p>
+          <hr />
+          <div class="footer_bottom">
+            <div class="footer_bottom_left">
+              <img src="image/logo.png" alt="팬더logo" />
+            </div>
+            <div class="footer_bottom_right">
+              <p class="korea_Head_Office1">한국WWF (세계자연기금 한국본부)</p>
+              <div class="footer_copy">
+                <p>
+                  대표자 홍정욱 고유번호 101-82-23485 주소 서울특별시 종로구
+                  종로 47 (공평동) SC제일은행본점빌딩 15층 WWF (세계자연기금)
+                  대표전화 02-722-1601 (운영시간 09-18시)
+                </p>
+                <p>
+                  후원 문의 members@wwfkorea.or.kr 기업 문의
+                  partnership@wwfkorea.or.kr 홍보 및 마케팅 문의
+                  marketing@wwfkorea.or.kr
+                </p>
+                <p class="lastTxt">
+                  © 2021 WWF - World Wide Fund For Nature (also known as World
+                  Wildlife Fund). <span>Creative Commons licence.</span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

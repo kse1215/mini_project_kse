@@ -27,7 +27,7 @@
   padding: var(--section-padding) var(--container-padding);
   justify-content: center;
   align-items: center;
-  min-height: 1080px;
+  min-height: clamp(300px, 55vw, 1080px);
   display: flex;
   position: relative;
 }
@@ -50,7 +50,7 @@
   object-fit: cover;
   width: 100%;
   max-width: none;
-  height: 1080px;
+  height: clamp(300px, 55vw, 1080px);
   position: absolute;
   top: 0;
   left: 0;
@@ -60,7 +60,7 @@
   object-fit: cover;
   width: 100%;
   max-width: none;
-  height: 1080px;
+  height: clamp(300px, 55vw, 1080px);
   position: absolute;
   top: 0;
   left: 0;
@@ -95,41 +95,6 @@
 
 .testBG {
   background-color: #000000;
-  height: 300px;
+  height: clamp(100px, 26vw, 300px);
   width: 100%;
-}
-
-/* 반응형 */
-@media all and (max-width: 1200px) {
-  .parallax__header {
-    min-height: 800px;
-  }
-  .parallax__visuals {
-    height: 800px;
-  }
-  .parallax__layers {
-    height: 800px;
-  }
-}
-@media all and (max-width: 768px) {
-  .parallax__header {
-    min-height: 500px;
-  }
-  .parallax__visuals {
-    height: 500px;
-  }
-  .parallax__layers {
-    height: 500px;
-  }
-}
-@media all and (max-width: 390px) {
-  .parallax__header {
-    min-height: 300px;
-  }
-  .parallax__visuals {
-    height: 300px;
-  }
-  .parallax__layers {
-    height: 300px;
-  }
 }

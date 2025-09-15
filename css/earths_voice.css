@@ -1,7 +1,7 @@
 @charset "utf-8";
 .earths_voice {
   background-color: #000;
-  scroll-margin-top: 100px;
+  scroll-margin-top: 110px;
 }
 /* 타이틀 */
 .earths_voice_inner h1 {
@@ -181,6 +181,9 @@
   .earths_voice_swiper_box.active {
     flex: none;
     height: 450px; /* 클릭 시 높이 */
+  }
+  .earths_voice_swiper_text span {
+    font-size: 15px;
   }
   .earths_voice_swiper_text span .mo {
     display: block;

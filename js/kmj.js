@@ -1,6 +1,7 @@
 window.addEventListener("load", function () {
   const buttons = document.querySelectorAll(".goods_btn");
   const mainImg = document.querySelector("#goods_img");
+  const tabImg = this.document.querySelector("#tab_thumb_img")
   buttons.forEach(function (btn) {
     btn.addEventListener("click", function () {
       buttons.forEach(function (b) {
@@ -14,6 +15,8 @@ window.addEventListener("load", function () {
       } else {
         btn.classList.add("active");
       }
+      const tabThumbImg = btn.dataset.img;
+      tabImg.src = tabThumbImg;
     });
   });
 });

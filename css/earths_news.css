@@ -3,6 +3,9 @@
 .earths_news {
   position: relative;
   /* padding: 100px 0; */
+  /* flex-wrap: wrap; */
+  margin-bottom: 100px;
+  scroll-margin-top: 140px;
 }
 
 .earths_news h1 {
@@ -18,6 +21,7 @@
 .earths_news_inner {
   width: 100%;
   display: flex;
+  /* flex-wrap: wrap; */
 }
 
 .earths_news h2 {
@@ -25,6 +29,7 @@
   font-weight: 600;
   font-size: var(--text--heading--h2);
   color: var(--color--font--black);
+  white-space: nowrap;
 }
 .news > a,
 .sign_top > a {
@@ -34,6 +39,7 @@
   color: var(--color--main);
   text-decoration: underline var(--color--main);
   text-underline-offset: 5px;
+  white-space: nowrap;
 }
 
 /* 소식 */
@@ -41,11 +47,13 @@
   display: flex;
   justify-content: space-between;
   width: 55%;
+  max-width: 730px;
   /* background-color: blue; */
 }
 .news_contents {
   width: 70%;
-  /* max-width: 1200px; */
+  max-width: 730px;
+  /* min-width: 250px; */
   /* margin: 100px auto; */
   /* background-color: aquamarine; */
 }
@@ -63,7 +71,6 @@
   font-weight: 400;
   color: var(--color--font--sub);
   /* background-color: aliceblue; */
-  cursor: pointer;
 }
 .news_contents > li.active > p {
   background-color: var(--color--main);
@@ -125,6 +132,7 @@
 /* 서명하기 */
 .sign {
   width: 45%;
+  max-width: 730px;
   /* height: 100%; */
   padding-left: 100px;
   /* background-color: aquamarine; */
@@ -145,12 +153,14 @@
 }
 .sign_swiper {
   width: 60%;
+  min-width: 350px;
   height: 416px;
   /* background-color: red; */
   margin: 0 !important;
 }
 .sign_swiper .swiper-slide {
   width: 100% !important;
+  min-width: 300px;
   /* height: 90px !important; */
   padding: 20px;
   background-color: var(--color--main);
@@ -185,7 +195,7 @@
   margin-top: 30px;
 }
 .sign_input input {
-  width: 90%;
+  width: 85%;
   padding: 12px 20px;
   border: none;
   border-radius: 36px;
@@ -211,4 +221,134 @@
   font-weight: 500;
   font-size: var(--text--body--regular);
   cursor: pointer;
+}
+
+/* 반응형 */
+@media screen and (max-width: 768px) {
+  /* .earths_news {
+margin: auto;
+} */
+  .earths_news_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 655px;
+    width: 100% !important;
+    margin: auto !important;
+    padding: 0 40px;
+  }
+  .earths_news_inner h1 {
+    /* margin: auto;  */
+    text-align: center;
+  }
+  /* 소식 */
+  .news {
+    /* width: 80%; */
+    width: 100%;
+    /* background-color: beige; */
+  }
+  /* .news h2 {
+    margin-right: 30px;
+  } */
+  /* 서명하기 */
+  .sign {
+    /* width: 80%; */
+    width: 100%;
+    padding: 0;
+    /* background-color: coral; */
+  }
+}
+@media screen and (max-width: 390px) {
+  .earths_news h1 {
+    /* margin: auto;  */
+    text-align: center;
+    font-size: 36px;
+  }
+
+  .earths_news_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 600px;
+    /* width: 100% !important; */
+    margin: auto !important;
+    padding: 0 20px;
+  }
+  .earths_news h2 {
+    font-size: 28px;
+  }
+  .news > a,
+  .sign_top > a {
+    font-size: 12px;
+  }
+  /* 소식 */
+  .news {
+    width: 98%;
+    /* background-color: beige; */
+  }
+  /* .news h2 {
+    margin-right: 5px;
+  } */
+  .news_contents {
+    width: 100% !important;
+    max-width: 230px;
+  }
+  .news_contents > li > p {
+    font-size: 15px;
+    width: 75px;
+    line-height: 32px;
+  }
+  .news_contents > li:nth-child(2) > p {
+    position: absolute;
+    left: 75px;
+  }
+  .news_contents > li:nth-child(3) > p {
+    position: absolute;
+    left: 150px;
+  }
+  .news_contents > li > div {
+    left: -20.7%;
+    /* background-color: antiquewhite; */
+  }
+  .news_desc ul li {
+    width: 100%;
+    padding: 25px 0;
+  }
+  .news_desc ul li p:first-child {
+    font-size: 16px;
+  }
+  .news_desc ul li p:last-child {
+    font-size: 12px;
+  }
+  /* 서명하기 */
+  .sign {
+    /* width: 80%; */
+    width: 100%;
+    padding: 0;
+    /* background-color: coral; */
+  }
+  .sign_desc p {
+    font-size: 16px;
+  }
+  .sign_swiper .swiper-slide p:first-child {
+    font-size: 13px;
+    /* margin-bottom: 15px; */
+  }
+  .sign_swiper .swiper-slide p:nth-child(2) {
+    font-size: 18px;
+  }
+  .sign_swiper .swiper-slide p:last-child {
+    font-family: "Paperozi";
+    font-size: 13px;
+    font-weight: 400;
+    text-align: end;
+  }
+  .sign_input input {
+    font-size: 15px;
+    max-width: 350px;
+  }
+  .sign_input button {
+    right: 0;
+    font-size: 15px;
+  }
 }

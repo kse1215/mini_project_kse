@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* 헤더 */
+.event_header {
+  width: 100%;
+  height: 100px;
+  background-color: var(--color--sub);
+}
+.cam_header_logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 74px;
+  background-color: #fff;
+  padding: 10px;
+}
+.cam_header_logo > a > img {
+  width: 100%;
+}
+.event_banner {
+  position: relative;
+}
+.event_banner img {
+  width: 100%;
+}
+.event_sub_title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Paperozi";
+}
+.event_main_title {
+  font-size: 68px;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Paperozi";
+}
+.event_inner {
+  position: relative;
+}
+.event_title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+}
+.event_news {
+  background-color: #333;
+  color: #fff;
+  width: 62px;
+  font-size: 24px;
+  text-align: center;
+  padding: 5px;
+  margin-top: 67px;
+  margin-bottom: 30px;
+}
+.event_instagram {
+  font-size: 35px;
+  font-weight: bolder;
+}
+.event_date {
+  font-size: 16px;
+  padding-top: 15px;
+}
+.event_poster {
+  padding-top: 80px;
+  width: 100%;
+}
+.event_poster img {
+  width: 100%;
+}
+.event_protect {
+  font-size: 50px;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Paperozi";
+}
+.contest_process {
+  display: flex;
+  gap: 50px;
+}
+.event_left p {
+  font-size: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+}
+.event_right {
+  width: 50%;
+}
+.event_right img {
+  width: 100%;
+}
+.event_left p:last-child {
+  font-size: 20px;
+}

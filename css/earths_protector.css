@@ -1,6 +1,6 @@
 @charset "utf-8";
 .earths_protector {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 60px;
   background-color: aliceblue;
 }
 .earths_protector_inner {
@@ -45,9 +45,9 @@
 }
 
 /* 가운데 활성화된 슬라이드만 원래 크기 */
-.earths_protector_swiper .swiper-slide-active img {
+/* .earths_protector_swiper .swiper-slide-active img {
   filter: brightness(1.2);
-}
+} */
 
 /* 앞뒤 슬라이드는 살짝 크게 (옵션) */
 .earths_protector_swiper .swiper-slide-prev,

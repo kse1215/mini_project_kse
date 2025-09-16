@@ -18,10 +18,8 @@
   padding: var(--spacing--large) 0;
 }
 /* 스와이퍼 */
-.earths_protector_swiper {
-  width: 100%;
-}
-.earths_protector_swiper .swiper-slide {
+.earths_protector_swiper .swiper-slide,
+.earths_protector_swiper_mo .swiper-slide {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,9 +31,15 @@
   overflow: hidden;
   transition: all 0.3s;
   background-color: aliceblue;
+  /* margin-right: 0 !important; */
 }
-.earths_protector_swiper .swiper-slide img {
-  width: 80%; /* 이미지 80% */
+.swiper_img {
+  position: relative;
+  width: 80%;
+}
+.earths_protector_swiper .swiper-slide img,
+.earths_protector_swiper_mo .swiper-slide img {
+  width: 100%;
   height: auto;
   display: block;
   object-fit: contain;
@@ -43,58 +47,71 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
 }
-
-/* 가운데 활성화된 슬라이드만 원래 크기 */
-/* .earths_protector_swiper .swiper-slide-active img {
-  filter: brightness(1.2);
-} */
+/* 텍스트(진행 종료 / 현재 진행중) */
+.swiper_img::after {
+  content: "진행 종료";
+  position: absolute;
+  bottom: 4%;
+  left: 5%;
+  text-align: center;
+  padding: 8px 20px;
+  border-radius: 40px;
+  font-family: "Pretendard";
+  color: var(--color--font--sub);
+  background-color: #eee;
+}
+.ongoing .swiper_img::after {
+  content: "현재 진행중";
+  position: absolute;
+  bottom: 4%;
+  left: 5%;
+  text-align: center;
+  padding: 8px 20px;
+  border-radius: 40px;
+  font-family: "Pretendard";
+  color: #fff;
+  background-color: var(--color--main);
+}
 
 /* 앞뒤 슬라이드는 살짝 크게 (옵션) */
 .earths_protector_swiper .swiper-slide-prev,
 .earths_protector_swiper .swiper-slide-next {
   z-index: 5;
 }
-.earths_protector_swiper .swiper-slide > p {
-  position: absolute;
-  bottom: 80px;
-  left: 130px;
-  text-align: center;
-  padding: 8px 20px;
-  border-radius: 40px;
-  font-family: "Pretendard";
-}
-.earths_protector_swiper .swiper-slide > .ongoing {
-  color: #fff;
-  background-color: var(--color--main);
-}
-.earths_protector_swiper .swiper-slide > .finished {
-  color: var(--color--font--sub);
-  background-color: #eee;
-}
 
 /* 반응형 */
+@media (max-width: 1920px) {
+  .earths_protector_swiper_mo {
+    display: none !important;
+  }
+}
 @media (max-width: 1280px) {
   .earths_protector_inner {
     width: 1200px !important;
+  }
+  .earths_protector_swiper_mo {
+    display: none !important;
   }
 }
 @media (max-width: 768px) {
   .earths_protector_inner {
     width: 680px !important;
   }
-  .earths_protector_swiper .swiper-slide > p {
-    position: absolute;
-    bottom: 50px;
-    left: 110px;
+  .earths_protector_swiper {
+    display: none !important;
+  }
+  .earths_protector_swiper_mo {
+    display: block !important;
   }
 }
 @media (max-width: 390px) {
   .earths_protector_inner {
     width: 350px !important;
   }
-  .earths_protector_swiper .swiper-slide > p {
-    position: absolute;
-    bottom: 30px;
-    left: 60px;
+  .earths_protector_swiper {
+    display: none !important;
+  }
+  .earths_protector_swiper_mo {
+    display: block !important;
   }
 }

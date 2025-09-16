@@ -30,23 +30,40 @@ window.addEventListener("load", function () {
     },
 
     // 반응형 설정
-    breakpoints: {
-      1920:{
-        slidesPerView: 2,
-        spaceBetween: 30,
-      },
-      768: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      390: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
+    // breakpoints: {
+    //   1920:{
+    //     slidesPerView: 2,
+    //     spaceBetween: 30,
+    //   },
+    //   768: {
+    //     slidesPerView: 1,
+    //     spaceBetween: 20,
+    //   },
+    //   390: {
+    //     slidesPerView: 1,
+    //     spaceBetween: 20,
+    //   },
+    // },
+  });
+  // 지구수비대 모바일 (한장만 보이도록)
+  var swiperMo = new Swiper(".earths_protector_swiper_mo", {
+    grabCursor: true,
+    centeredSlides: true, // ✅ 가운데 정렬
+    slidesPerView: 1, // ✅ 3장만 보이게
+    spaceBetween: 20,
+    loop: true, // 무한 반복
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
     },
   });
-  const link = this.document.querySelector(".event_link");
-  link.addEventListener("click", () => {
+
+  const eventLink = this.document.querySelector(".event_link");
+  eventLink.addEventListener("click", () => {
     this.window.location.href = "event.html";
+  });
+  const gameLink = this.document.querySelector(".game_link");
+  gameLink.addEventListener("click", () => {
+    this.window.location.href = "https://www.beesurvival.co.kr/";
   });
 });

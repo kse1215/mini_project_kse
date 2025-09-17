@@ -58,6 +58,7 @@ window.addEventListener("load", function () {
     },
   });
 
+  // 지구수비대 링크 이동
   const eventLink = this.document.querySelector(".event_link");
   eventLink.addEventListener("click", () => {
     this.window.location.href = "event.html";
